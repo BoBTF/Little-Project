@@ -1,0 +1,156 @@
+*{
+	margin: 0%;
+	padding: 0%;
+	font-family: Arial;
+	color: white;
+}
+
+.bg-text{
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.4);
+	backdrop-filter: blur(10px);
+	color: white;
+	font-weight: bold;
+	border-radius: 25px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: max-content;
+	padding: 20px;
+	text-align: center;
+}
+
+.bg-image{
+	background-image: url("databseBG.jpg");
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+h1{
+	text-align: center;
+	padding: 30px;
+	font-size: 40px;
+	font-weight: lighter;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	letter-spacing: 0.1em;
+}
+
+form{
+    text-align: center;
+    margin-top: 10px; 
+}
+
+input{
+    border-color: #016ABC;
+    color: white;
+	margin-bottom: 15px;
+	padding-right: 15px; 
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 60%;
+	height: 15px;  
+	background-color: transparent;
+	position: relative;
+	border-top: 5px;
+	border-left: 5px;
+	border-right: 5px;
+	outline: none;
+}
+
+.loguj{
+	background: transparent;
+	color: #fff;
+	border: none;
+	text-shadow: none;
+	width: 100px;
+	padding: 2px;
+	margin-top: 20px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	transition: 0.4s all ease;
+}
+
+.loguj:hover{
+	transition: transform 0.4s all ease;
+	cursor: pointer;
+}
+
+.loguj::after{
+	content: '';
+	position: absolute;
+	width: 18%;
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	height: 2px;
+	bottom: 35;
+	left: 41%;
+	background-color: #016ABC;
+	transform-origin: bottom left;
+	transition: transform 0.5s ease-out;
+}
+
+.loguj:hover::after{
+	transform: scaleX(1);
+	transition: transform 0.5s ease-out;
+}
+
+#check{
+	position: absolute;
+	width: 4%;
+	height: 4%;
+	outline: none;
+	margin-right: -15px;
+	top: 62%;
+	right: 20%;
+	display: none;
+}
+
+#eyeicon {
+	height: 6%;
+	width: 6%;
+	position: absolute;
+	margin-right: -15px;
+	top: 61%;
+	right: 18%;
+	cursor: pointer;
+	object-fit: contain;
+  }
+
+.error{
+	margin: 0;
+	color: #ff0000;
+}
+
+span{
+	position: absolute;
+	left: 21%;
+	padding: 8px;
+	font-weight: lighter;
+	color: gray;
+	pointer-events: none;
+	font-size: 1em;
+	color: rgba(255,255,255,0,25);
+	text-transform: uppercase;
+	transition: 0.5s;
+}
+
+.spanlogin .logowanie:valid ~ span,
+.spanlogin .logowanie:focus ~ span
+{
+	color: #016ABC;
+	transform: translateX(-1px) translateY(-15px);
+	font-size: 0.70em;
+	letter-spacing: 0.2em;
+}
+
+.spanhaslo #myInput:valid ~ span,
+.spanhaslo #myInput:focus ~ span
+{
+	color: #016ABC;
+	transform: translateX(-1px) translateY(-15px);
+	font-size: 0.70em;
+	letter-spacing: 0.2em;
+}

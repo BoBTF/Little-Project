@@ -1,0 +1,304 @@
+*{
+	margin: 0%;
+	padding: 0%;
+	font-family: Arial;
+	color: white;
+}
+
+article h1{
+	text-align: center;
+	padding: 30px;
+	font-size: 210%;
+	font-weight: lighter;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	letter-spacing: 0.1em;
+}
+
+.bg-text-top{
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.4);
+	color: white;
+	font-weight: lighter;
+	position: absolute;
+    top: 0;
+    width: 100%;
+	height: 4%;
+    z-index: 90;
+	padding-top: 3%;
+	font-size: 150%;
+	backdrop-filter: blur(10px);
+}
+
+.sidebar{
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.4);
+	border-bottom-right-radius: 20px;
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;
+	color: white;
+	font-weight: lighter;
+	position: absolute;
+    top: 0;
+    width: 15%;
+	height: 40%;
+    z-index: 100;
+	padding-top: 3%;
+	font-size: 150%;
+	text-align: left;
+	transition: 0.5s;
+	overflow: hidden;
+	backdrop-filter: blur(10px);
+	left: -16%;
+}
+
+#check:checked ~ .sidebar{
+	transform: translateX(101%) translateY(0px);
+}
+
+article{
+	text-align: center;
+	top: 50%;
+	position: absolute;
+	width: 40%;
+	left: 50%;
+	height: max-content;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 20px;
+	z-index: 100;
+	padding: 20;
+	
+	transform: translate(-50%, -50%);
+}
+
+input{
+    border-color: #016ABC;
+    color: white;
+	margin-bottom: 15px;
+	padding-right: 15px; 
+	padding-top: 15px;
+	padding-bottom: 15px;
+	width: 30%;
+	height: 15px;  
+	background-color: transparent;
+	position: relative;
+	border-top: 5px;
+	border-left: 5px;
+	border-right: 5px;
+	outline: none;
+	z-index: 100;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+table tr td{
+	text-align: center;
+	border: 2px solid rgb(192, 192, 192);
+	width: 10%;
+	padding: 5;
+}
+
+.abovetable td{
+	font-weight: lighter;
+	border: none;
+	font-size: 120%;
+	padding: 10px;
+	letter-spacing: 0.1em;
+}
+
+.zatwierdz{
+	position: absolute;
+	bottom: 2%;
+	font-size: 130%;
+	letter-spacing: 0.1em;
+	font-weight: lighter;
+	left: 50%;
+    font-weight: lighter;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+	transform: translate(-50%, -50%);
+}
+
+#menu{
+	left: 2%;
+	top: 3%;
+	width: 2%;
+	height: 4%;
+	z-index: 100;
+	position: absolute;
+	cursor: pointer;
+	z-index: 101;
+}
+
+span{
+	position: absolute;
+	left: 35%;
+	padding: 8px;
+	font-weight: lighter;
+	color: gray;
+	pointer-events: none;
+	font-size: 1em;
+	color: rgba(255,255,255,0,25);
+	text-transform: uppercase;
+	transition: 0.5s;
+	
+}
+
+#check{
+	left: 2%;
+	top: 2%;
+	width: 2%;
+	height: 4%;
+	display: none;
+	position: absolute;
+}
+
+#wyloguj{
+	color: white;
+	font-weight: lighter;
+	position: absolute;
+    bottom: 0;
+    z-index: 100;
+	left: 35%;
+	font-size: 80%;
+	padding: 10px;
+	letter-spacing: 0.1em;
+}
+
+#magazyntext{
+	color: white;
+	font-weight: lighter;
+	position: absolute;
+    top: 22;
+    z-index: 90;
+	left: 15%;
+	font-size: max-content;
+	padding: 10px;
+	letter-spacing: 0.1em;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#zamowienia{
+	color: white;
+	font-weight: lighter;
+	position: absolute;
+    top: 22;
+    z-index: 90;
+	left: 25%;
+	font-size: max-content;
+	padding: 10px;
+	letter-spacing: 0.1em;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#kontrahenci{
+	color: white;
+	font-weight: lighter;
+	position: absolute;
+    top: 22;
+    z-index: 90;
+	left: 37.2%;
+	font-size: max-content;
+	padding: 10px;
+	letter-spacing: 0.1em;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.bg-image{
+	background-image: url("databseBG.jpg");
+	filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='a' x='0' y='0' width='1' height='1'%3E%3CfeGaussianBlur stdDeviation='4' result='b'/%3E%3CfeMorphology operator='dilate' radius='4'/%3E %3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='b'/%3E%3C/feMerge%3E%3C/filter%3E%3C/svg%3E#a");
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+
+nav:hover{
+	transition: transform 0.4s all ease;
+	cursor: pointer;
+}
+
+nav::after{
+	content: '';
+	position: absolute;
+	width: 90%;
+	transform: scaleX(0);
+	transform-origin: bottom left;
+	height: 2px;
+	bottom: 5;
+	left: 5%;
+	background-color: #016ABC;
+	transform-origin: bottom left;
+	transition: transform 0.5s ease-out;
+}
+
+nav:hover::after{
+	transform: scaleX(1);
+	transition: transform 0.5s ease-out;
+}
+
+a:link{
+	text-decoration: none;
+}
+
+#logout{
+	width: 6%;
+	height: 4%;
+	position: absolute;
+	bottom: 3%;
+	left: 29%;
+}
+
+#zalogowano{
+	font-size: 70%;
+	position: absolute;
+	top: 6%;
+	padding: 10px;
+	right: 0;
+	font-weight: lighter;
+	letter-spacing: 0.1em;
+}
+
+.marka:valid ~ .marka,
+.marka:focus ~ .marka{
+	color: #016ABC;
+	transform: translateX(-4px) translateY(-15px);
+	font-size: 0.70em;
+	letter-spacing: 0.2em;
+}
+
+.rozmiar:valid ~ .rozmiar,
+.rozmiar:focus ~ .rozmiar{
+	color: #016ABC;
+	transform: translateX(-4px) translateY(-15px);
+	font-size: 0.70em;
+	letter-spacing: 0.2em;
+}
+
+.model:valid ~ .model,
+.model:focus ~ .model{
+	color: #016ABC;
+	transform: translateX(-4px) translateY(-15px);
+	font-size: 0.70em;
+	letter-spacing: 0.2em;
+}
+
+.ilosc:valid ~ .ilosc,
+.ilosc:focus ~ .ilosc{
+	color: #016ABC;
+	transform: translateX(-4px) translateY(-15px);
+	font-size: 0.70em;
+	letter-spacing: 0.2em;
+}
+
+.opis:valid ~ .opis,
+.opis:focus ~ .opis{
+	color: #016ABC;
+	transform: translateX(-4px) translateY(-15px);
+	font-size: 0.70em;
+	letter-spacing: 0.2em;
+}
